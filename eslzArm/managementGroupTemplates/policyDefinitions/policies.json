@@ -13660,11 +13660,186 @@
                                     "displayName": "Deploy Diagnostic Settings for Storage Accounts to Log Analytics workspace",
                                     "description": "Deploys the diagnostic settings for Storage Accounts to stream to a Log Analytics workspace when any storage account which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled"
                                 }
+                            },
+                            "StorageAccountsLogAnalyticsServicesToDeploy": {
+                                "type": "Array",
+                                "metadata": {
+                                    "displayName": "Storage services to deploy",
+                                    "description": "List of Storage services to deploy"
+                                },
+                                "defaultValue": [
+                                    "storageAccounts",
+                                    "blobServices",
+                                    "fileServices",
+                                    "tableServices",
+                                    "queueServices"
+                                ]
+                            },
+                            "StorageAccountsLogAnalyticsStorageDelete": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "StorageDelete - Enabled",
+                                    "description": "Whether to stream StorageDelete logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "StorageAccountsLogAnalyticsStorageRead": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "StorageRead - Enabled",
+                                    "description": "Whether to stream StorageRead logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "StorageAccountsLogAnalyticsStorageWrite": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "StorageWrite - Enabled",
+                                    "description": "Whether to stream StorageWrite logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "StorageAccountsLogAnalyticsTransaction": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "Transaction - Enabled",
+                                    "description": "Whether to stream Transaction logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "AKSLogAnalyticsAllMetrics": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "AllMetrics - Enabled",
+                                    "description": "Whether to stream AllMetrics logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "AKSLogAnalyticsCluster-autoscaler": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "cluster-autoscaler - Enabled",
+                                    "description": "Whether to stream cluster-autoscaler logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "AKSLogAnalyticsGuard": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "guard - Enabled",
+                                    "description": "Whether to stream guard logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "AKSLogAnalyticsKube-apiserver": {
+
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "kube-apiserver - Enabled",
+                                    "description": "Whether to stream kube-apiserver logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "AKSLogAnalyticsKube-audit": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "kube-audit - Enabled",
+                                    "description": "Whether to stream kube-audit logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "AKSLogAnalyticsKube-audit-admin": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "kube-audit-admin - Enabled",
+                                    "description": "Whether to stream kube-audit-admin logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "AKSLogAnalyticsKube-controller-manager": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "kube-controller-manager - Enabled",
+                                    "description": "Whether to stream kube-controller-manager logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "AKSLogAnalyticsKube-scheduler": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "kube-scheduler - Enabled",
+                                    "description": "Whether to stream kube-scheduler logs to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "EventHubLogAnalyticslogsEnabled": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "Enable metrics",
+                                    "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "False"
+                            },
+                            "EventHubLogAnalyticsmetricsEnabled": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "Enable logs",
+                                    "description": "Whether to enable logs stream to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "KeyVaultLogAnalyticsLogsEnabled": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "Enable logs",
+                                    "description": "Whether to enable logs stream to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "KeyVaultLogAnalyticsMetricsEnabled": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "Enable metrics",
+                                    "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False"
+                                },
+                                "defaultValue": "False"
+                            },
+                            "NetworkPublicIPNicLogAnalyticsMetricsEnabled": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "Enable Metrics",
+                                    "description": "Enable Metrics - True or False"
+                                },
+                                "defaultValue": "False"
+                            },
+                            "NetworkPublicIPNicLogAnalyticsLogsEnabled": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "Enable Logs",
+                                    "description": "Enable Logs - True or False"
+                                },
+                                "defaultValue": "True"
+                            },
+                            "RecoveryVaultLogAnalyticsTagName": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "Exclusion Tag Name",
+                                    "description": "Name of the tag to use for excluding vaults from this policy. This should be used along with the Exclusion Tag Value parameter."
+                                },
+                                "defaultValue": ""
+                            },
+                            "RecoveryVaultLogAnalyticsTagValue": {
+                                "type": "String",
+                                "metadata": {
+                                    "displayName": "Exclusion Tag Value",
+                                    "description": "Value of the tag to use for excluding vaults from this policy. This should be used along with the Exclusion Tag Name parameter."
+                                },
+                                "defaultValue": ""
                             }
                         },
                         "policyDefinitionGroups": null,
                         "metadata": {
-                            "version": "1.0.0",
+                            "version": "1.3.0",
                             "category": "Monitoring"
                         },
                         "PolicyDefinitions": [
@@ -13677,6 +13852,21 @@
                                     },
                                     "effect": {
                                         "value": "[[parameters('StorageAccountsLogAnalyticsEffect')]"
+                                    },
+                                    "servicesToDeploy": {
+                                        "value": "[[parameters('StorageAccountsLogAnalyticsServicesToDeploy')]"
+                                    },
+                                    "StorageDelete": {
+                                        "value": "[[parameters('StorageAccountsLogAnalyticsStorageDelete')]"
+                                    },
+                                    "StorageRead": {
+                                        "value": "[[parameters('StorageAccountsLogAnalyticsStorageRead')]"
+                                    },
+                                    "StorageWrite": {
+                                        "value": "[[parameters('StorageAccountsLogAnalyticsStorageWrite')]"
+                                    },
+                                    "Transaction": {
+                                        "value": "[[parameters('StorageAccountsLogAnalyticsTransaction')]"
                                     }
                                 }
                             },
@@ -13767,7 +13957,33 @@
                                     },
                                     "diagnosticsSettingNameToUse": {
                                         "value": "[[parameters('profileName')]"
+                                    },
+                                    "AllMetrics": {
+                                        "value": "[[parameters('AKSLogAnalyticsAllMetrics')]"
+                                    },
+                                    "cluster-autoscaler": {
+                                        "value": "[[parameters('AKSLogAnalyticsCluster-autoscaler')]"
+                                    },
+                                    "guard": {
+                                        "value": "[[parameters('AKSLogAnalyticsGuard')]"
+                                    },
+                                    "kube-apiserver": {
+                                        "value": "[[parameters('AKSLogAnalyticsKube-apiserver')]"
+                                    },
+                                    "kube-audit": {
+                                        "value": "[[parameters('AKSLogAnalyticsKube-audit')]"
+                                    },
+                                    "kube-audit-admin": {
+                                        "value": "[[parameters('AKSLogAnalyticsKube-audit-admin')]"
+                                    },
+                                    "kube-controller-manager": {
+                                        "value": "[[parameters('AKSLogAnalyticsKube-controller-manager')]"
+                                    },
+                                    "kube-scheduler": {
+                                        "value": "[[parameters('AKSLogAnalyticsKube-scheduler')]"
                                     }
+
+
                                 }
                             },
                             {
@@ -14022,6 +14238,12 @@
                                     },
                                     "profileName": {
                                         "value": "[[parameters('profileName')]"
+                                    },
+                                    "logsEnabled": {
+                                        "value": "[[parameters('EventHubLogAnalyticslogsEnabled')]"
+                                    },
+                                    "metricsEnabled": {
+                                        "value": "[[parameters('EventHubLogAnalyticsmetricsEnabled')]"
                                     }
                                 }
                             },
@@ -14142,6 +14364,12 @@
                                     },
                                     "profileName": {
                                         "value": "[[parameters('profileName')]"
+                                    },
+                                    "logsEnabled": {
+                                        "value": "[[parameters('KeyVaultLogAnalyticsLogsEnabled')]"
+                                    },
+                                    "metricsEnabled": {
+                                        "value": "[[parameters('KeyVaultLogAnalyticsMetricsEnabled')]"
                                     }
                                 }
                             },
@@ -14324,7 +14552,10 @@
                                         "value": "[[parameters('profileName')]"
                                     },
                                     "metricsEnabled": {
-                                        "value": "True"
+                                        "value": "[[parameters('NetworkPublicIPNicLogAnalyticsMetricsEnabled')]"
+                                    },
+                                    "logsEnabled": {
+                                        "value": "[[parameters('NetworkPublicIPNicLogAnalyticsLogsEnabled')]"
                                     }
                                 }
                             },
@@ -14337,6 +14568,12 @@
                                     },
                                     "profileName": {
                                         "value": "[[parameters('profileName')]"
+                                    },
+                                    "tagName": {
+                                        "value": "[[parameters('RecoveryVaultLogAnalyticsTagName')]"
+                                    },
+                                    "tagValue": {
+                                        "value": "[[parameters('RecoveryVaultLogAnalyticsTagValue')]"
                                     }
                                 }
                             },
